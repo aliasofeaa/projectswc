@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar color="light">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center">PROFILE</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>My Profile</ion-card-title>
+    </ion-card-header>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>{{ userProfile?.fullname }}</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-item>
+        <ion-icon slot="start" name="person"></ion-icon>
+        <ion-label>{{ userProfile?.name }}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon slot="start" name="mail"></ion-icon>
+        <ion-label>{{ userProfile?.email }}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon slot="start" name="call"></ion-icon>
+        <ion-label>{{ userProfile?.telephone }}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon slot="start" name="location"></ion-icon>
+        <ion-label>{{ userProfile?.address }}</ion-label>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

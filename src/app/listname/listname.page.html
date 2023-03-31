@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar color="light">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center">LISTNAME</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen>
+  <ion-list>
+    <ion-list-header>TASKA</ion-list-header>
+    <ion-item *ngFor="let item of taskaItems">
+      <ion-checkbox color="primary" slot="start" [(ngModel)]="item.checked"></ion-checkbox>
+      <ion-label>{{item.label}}</ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+    <ion-list-header>TADIKA</ion-list-header>
+    <ion-item *ngFor="let item of tadikaItems">
+      <ion-checkbox color="primary" slot="start" [(ngModel)]="item.checked"></ion-checkbox>
+      <ion-label>{{item.label}}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-button expand="block" color="primary" (click)="submit()">SUBMIT</ion-button>
+    </ion-item>
+  </ion-list>
+</ion-content>
